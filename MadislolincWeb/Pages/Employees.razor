@@ -1,0 +1,48 @@
+﻿@page "/employees"
+
+<PageTitle>Our employees</PageTitle>
+
+@using MadislolincWeb.Data
+@inject EmployeeDataFetcher EmployeeData
+
+<h1>Employees and Contact</h1>
+
+<p>Employees are listed down below:</p>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in employees)
+            {
+                <tr>
+                    <td>@employee.Firstname</td>
+                    <td>@employee.Lastname</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Employee[] employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        employees = await EmployeeData.GetEmployeesAsync();
+    }
+}
