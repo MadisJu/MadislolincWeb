@@ -19,7 +19,8 @@ namespace MadislolincWeb.Data
                 Firstname = employees[Index].Firstname,
                 Lastname = employees[Index].Lastname,
                 Email = employees[Index].Email,
-                Phone = employees[Index].Phone
+                Phone = employees[Index].Phone,
+                ImageName = employees[Index].ImageName
             }
             ).ToArray());
         }

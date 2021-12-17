@@ -10,6 +10,10 @@
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties data_4employeeschema_1json__JsonSchema="" data_4json_1json__JsonSchema="Employee" /></VisualStudio></ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="wwwroot\data\employeeimages\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>
