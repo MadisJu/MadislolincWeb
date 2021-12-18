@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+img.employee-image
+{
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+}
+
 div.employee-grid
 {
     display: grid;
