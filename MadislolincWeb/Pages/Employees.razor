@@ -1,0 +1,45 @@
+﻿@page "/employees"
+
+<PageTitle>Our employees</PageTitle>
+
+@using MadislolincWeb.Data
+@inject EmployeeDataFetcher EmployeeData
+
+<h1>Employees and Contact</h1>
+
+<p>Employees are listed down below:</p>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    
+    <div class="employee-grid">
+        @foreach (var employee in employees)
+        {
+        <div class="employeebox">
+            <img src="@GetImageString(employee)" class="employee-image">
+            <h1>@employee.Lastname</h1>
+            <h2>@employee.Firstname</h2>
+            <a href = "mailto: @employee.Email">@employee.Email</a>
+            <p>Mobile: @employee.Phone</p>
+        </div>
+        }   
+    </div>
+    
+}
+
+@code {
+    private Employee[] employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        employees = await EmployeeData.GetEmployeesAsync();
+    }
+    private string GetImageString(Employee employee)
+    {
+        return $"data/employeeimages/{employee.ImageName}";
+    }
+}
