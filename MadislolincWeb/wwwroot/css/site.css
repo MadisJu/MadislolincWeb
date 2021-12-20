@@ -12,10 +12,20 @@ a, .btn-link {
     color: #0071c1;
 }
 
+.nav-link{
+    color:aliceblue;
+    
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
+}
+
+div.webpage-background {
+    /*background-image: url("images/The-Office-season-1-Temporary-Testing-Background.jpg");*/
+    background-image: linear-gradient(#4F4A88,#6B679C)
 }
 
 .content {

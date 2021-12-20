@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\data\employeeimages\" />
+    <Folder Include="wwwroot\css\images\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
