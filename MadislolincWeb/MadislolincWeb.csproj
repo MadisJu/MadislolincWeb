@@ -10,6 +10,11 @@
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="wwwroot\data\employeeimages\" />
+    <Folder Include="wwwroot\css\images\" />
+  </ItemGroup>
+
+
 
 </Project>
