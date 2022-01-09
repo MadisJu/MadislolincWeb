@@ -23,10 +23,10 @@
 
 
 div.navbar {
-    margin: auto;
+    margin: auto auto 30px auto;
     width: 80%;
-    background-color: #6B679C;
-    border-style: dotted;
+    background-color:cornflowerblue;
+    border-radius: 15px;
 }
 
 nav.navbar-display {
@@ -42,16 +42,16 @@ div.navlink-box{
 article.content{
     margin: auto;
     width: 70%;
-    border-style: solid;
+    border-radius: 15px;
+    background-color: azure;
 }
 
 img.employee-image {
     border-radius: 30px;
-    height: 200px;
-    width: 200px;
+    height: 30%;
+    width: 20%;
     border-style: inset;
     border-block-width: 10px;
-    border-color: #241F64;
 }
 
 
@@ -60,17 +60,12 @@ div.employee-grid {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 20px;
-    background-color: #4F4A88;
 }
 
 div.employeebox {
-    background-color: #373276;
+    background-color: cornsilk;
     border-style: outset;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     margin: 50px 30px 30px;
     border-radius: 15px;
-    border-color: #241F64;
 }

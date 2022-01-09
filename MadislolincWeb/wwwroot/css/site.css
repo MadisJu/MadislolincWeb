@@ -2,6 +2,9 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    background-color: #0071c1;
+
 }
 
 h1:focus {
@@ -19,13 +22,8 @@ a, .btn-link {
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
+    background-color: #196fc5;
     border-color: #1861ac;
-}
-
-div.webpage-background {
-    /*background-image: url("images/The-Office-season-1-Temporary-Testing-Background.jpg");*/
-    background-image: linear-gradient(#4F4A88,#6B679C)
 }
 
 .content {
