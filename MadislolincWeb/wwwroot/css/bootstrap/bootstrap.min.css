@@ -58,14 +58,14 @@ img.employee-image {
 
 div.employee-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 1rem;
 }
 
 div.employeebox {
     background-color: cornsilk;
     border-style: outset;
-    padding: 20px;
-    margin: 50px 30px 30px;
+    display: flexbox;
     border-radius: 15px;
 }
