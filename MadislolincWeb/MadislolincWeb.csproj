@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\data\employeeimages\" />
     <Folder Include="wwwroot\css\images\" />
   </ItemGroup>
 

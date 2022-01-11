@@ -1,17 +1,15 @@
 ﻿@inherits LayoutComponentBase
 
 <PageTitle>Madislosinc</PageTitle>
-
-<body>
-    <div class ="webpage-background">
+<html class = "webpage-background">
+    <header>
         <div class="navbar">
-            <NavMenu />
+            <NavMenu/>
         </div>
-
-        <main>
-            <article class="content">
-                @Body
-            </article>
-        </main>
-    </div>
-</body>
+    </header>
+    <article class="content">
+    @Body
+    </article>
+    <footer class="footer">
+    </footer> 
+</html>
