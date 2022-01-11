@@ -23,27 +23,37 @@
 
 
 div.navbar {
-    margin: auto auto 30px auto;
+    margin: auto auto 7px auto;
     width: 100%;
-    background-color:cornflowerblue;
-    border-radius: 15px;
+    background-color: rgba(147, 204, 234, 0.7);
+    border-radius: 5px;
+    box-shadow: inset;
 }
 
 nav.navbar-display {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-div.navlink-box{
+.navlink-box{
     margin: 10px 10px 10px 10px;
     text-align:center;
+    padding: 10px;
+}
+.navlink-box:hover{
+    margin: 10px 10px 10px 10px;
+    background-color: rgba(147, 204, 234, 0.3);
+    text-align:center;
+}
+.nav-link {
+    color: aliceblue;
 }
 
 .content{
-    margin: auto auto 30px auto;
+    margin: auto auto 7px auto;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: azure;
 }
 
@@ -55,9 +65,16 @@ div.navlink-box{
 
 img.employee-image {
     border-radius: 30px;
-    height: 30%;
-    width: 20%;
-    border-style: inset;
+    height: 40%;
+    width: 40%;
+    border-style:solid;
+    border-block-width: 3px;
+}
+img.grandpa-picture {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    border-style: none;
     border-block-width: 10px;
 }
 
@@ -67,13 +84,14 @@ div.employee-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     overflow-x: auto;
-    grid-auto-flow: dense;
+    overflow-y: auto;
     grid-gap: 1rem;
 }
 
 div.employeebox {
     background-color: cornsilk;
     border-style: outset;
+    margin 5px;
     display: flexbox;
     border-radius: 15px;
 }
