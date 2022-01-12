@@ -33,9 +33,11 @@ div.navbar {
 nav.navbar-display {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
 }
 
 .navlink-box{
+    width: auto;
     margin: 10px 10px 10px 10px;
     text-align:center;
     padding: 10px;
@@ -84,14 +86,14 @@ div.employee-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     overflow-x: auto;
-    overflow-y: auto;
+    
     grid-gap: 1rem;
 }
 
 div.employeebox {
     background-color: cornsilk;
     border-style: outset;
-    margin 5px;
+    margin: 5px;
     display: flexbox;
     border-radius: 15px;
 }
