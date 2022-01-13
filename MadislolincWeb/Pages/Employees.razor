@@ -20,11 +20,11 @@ else
         @foreach (var employee in employees)
         {
         <div class="employeebox">
-            <img src="@GetImageString(employee)" class="employee-image">
-            <h1>@employee.Lastname</h1>
-            <h2>@employee.Firstname</h2>
-            <a href = "mailto: @employee.Email">@employee.Email</a>
-            <p>Mobile: @employee.Phone</p>
+            <photo src="@GetImageString(employee)"> </photo>
+            <name>@employee.Lastname</name>
+            <name>@employee.Firstname</name>
+            <email href = "mailto: @employee.Email">@employee.Email</email>
+            <phone>Mobile: @employee.Phone</phone>
         </div>
         }   
     </div>
