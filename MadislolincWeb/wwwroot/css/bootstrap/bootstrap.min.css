@@ -55,8 +55,6 @@ nav.navbar-display {
     margin: auto auto 7px auto;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
     border-radius: 5px;
     background-color: azure;
 }
@@ -88,19 +86,17 @@ img.grandpa-picture {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     aspect-ratio: 1 / 1;
-    overflow-x: auto;
-    overflow-y: auto;
     overflow: hidden;
-    max-width: auto;
+    max-width: 100vh;
     max-height: 100vh;
     grid-gap: 1rem;
     
 }
 
 .employeebox {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    display:block;
+    max-width: 1fr;
+    max-height: 1fr;
     
     background-color: cornsilk;
     border-style: solid;
@@ -114,19 +110,19 @@ img.grandpa-picture {
     text-overflow:ellipsis;
 }
 
-.employeebox photo{
-    grid-row-start: 1;
-    grid-row-end: 1;
+.e-photo{
+    max-width: 40%;
+    max-height: 40%;
 }
-.employeebox name{
+.e-name{
     grid-row-start: 2;
     grid-row-end: 3;
 }
-.employeebox email{
+.e-email{
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.employeebox phone{
+.e-phone{
     grid-row-start: 1;
     grid-row-end: 3;
 }
@@ -136,10 +132,8 @@ img.grandpa-picture {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
         aspect-ratio: 1 / 1;
-        overflow-x: auto;
-        overflow-y: auto;
         overflow: hidden;
-        max-width: auto;
+        max-width: 100vh;
         max-height: 100vh;
         grid-gap: 1rem;
     }
@@ -151,10 +145,8 @@ img.grandpa-picture {
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         aspect-ratio: 1 / 1;
-        overflow-x: auto;
-        overflow-y: auto;
         overflow: hidden;
-        max-width: auto;
+        max-width: 100vh;
         max-height: 100vh;
         grid-gap: 1rem;
     }
