@@ -14,17 +14,11 @@
     "ImageName": "irdt3.jpg"
   },
   {
-    "Firstname": "Nigward",
-    "Lastname": "The",
-    "Email": "krustycrab@crabmail.com",
-    "Phone": "+112",
-    "ImageName": "nigward_TheGreat.png"
-  },
-  {
-    "Firstname": "Joomas",
-    "Lastname": "Kala",
-    "Email": "KaladelPoleEmaili@mail.ee",
-    "Phone": "+37254583087"
+    "Firstname": "Siin võiks",
+    "Lastname": "olla teie nimi",
+    "Email": "ja email",
+    "Phone": "ja muu",
+    "ImageName": "Matt.png"
   },
   {
     "Firstname": "Joomas",
