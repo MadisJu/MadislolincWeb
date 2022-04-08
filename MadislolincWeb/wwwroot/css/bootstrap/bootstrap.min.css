@@ -125,6 +125,33 @@ div.newsthumbnail-grid {
 
 div.newsthumbnail-box {
     background-color: wheat;
-    max-height 1fr;
-    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 0.5fr;
+    display: grid;
+}
+
+img.newsthumbnail-image {
+    border-radius: 30px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto;
+    border-style: solid;
+    border-block-width: 3px;
+}
+
+h1.newsthumbnail-title {
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+button.newthumbnail-button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }

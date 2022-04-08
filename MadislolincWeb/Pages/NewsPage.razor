@@ -19,9 +19,11 @@ else
         @foreach (var _news in news)
         {
             <div class="newsthumbnail-box">
-            <button onclick="@(() => ToggleNews(_news))">Read This immediately!</button>
-            <img src="@GetImageString(_news)" class>
-            <h1>@_news.Title</h1>
+            <img src="@GetImageString(_news)" class ="newsthumbnail-image">
+            <h1 class="newsthumbnail-title">@_news.Title</h1>
+            <button onclick="@(() => ToggleNews(_news))" class="newthumbnail-button">Read This immediately!</button>
+            
+            
             </div>   
         }
         </div>
