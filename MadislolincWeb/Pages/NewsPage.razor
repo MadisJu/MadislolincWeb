@@ -1,0 +1,62 @@
+﻿@page "/news"
+
+@using MadislolincWeb.Data
+@inject NewsDataFetcher NewsData
+
+<PageTitle>Latest News!</PageTitle>
+
+@if(news == null)
+{
+    <p>Loading latest news...</p>
+}
+else
+{
+
+    @if(!Showing)
+    {
+        <div class="newsthumbnail-grid">
+
+        @foreach (var _news in news)
+        {
+            <div class="newsthumbnail-box">
+            <button onclick="@(() => ToggleNews(_news))">Read This immediately!</button>
+            <img src="@GetImageString(_news)" class>
+            <h1>@_news.Title</h1>
+            </div>   
+        }
+        </div>
+    }
+    else
+    {
+        <h1>@SelectedNews.Title</h1>
+        <p>@SelectedNews.Story</p>
+        <button onclick="@(() => ToggleNews(null))"> Click here to go back</button>
+    }
+
+}
+@code
+{
+
+    private bool Showing = false;
+
+    private News SelectedNews;
+
+    private News[] news;
+
+    private void ToggleNews(News _selected)
+    {
+        SelectedNews = _selected;
+        Showing = !Showing;
+        InvokeAsync(() => StateHasChanged());
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        news = await NewsData.GetNewsAsync();
+    }
+
+    private string GetImageString(News news)
+    {
+        return $"data/newsimages/{news.ImageName}";
+    }
+}
