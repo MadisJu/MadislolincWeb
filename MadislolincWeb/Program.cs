@@ -9,6 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<HttpClient>();
 builder.Services.AddSingleton<EmployeeDataFetcher>();
+builder.Services.AddSingleton<NewsDataFetcher>();
 
 var app = builder.Build();
 

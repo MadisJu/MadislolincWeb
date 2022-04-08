@@ -20,8 +20,6 @@
     color: #6B679C
 }
 
-
-
 div.navbar {
     margin: auto auto 7px auto;
     width: 100%;
@@ -53,8 +51,10 @@ nav.navbar-display {
 
 .content{
     margin: auto auto 7px auto;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    min-width: 0;
     border-radius: 5px;
     background-color: azure;
 }
@@ -84,11 +84,14 @@ img.grandpa-picture {
 
 .employee-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    overflow-x: auto;
+    overflow-y: auto;
+    min-width: 0;
     overflow: hidden;
-    max-width: 100vh;
-    max-height: 100vh;
+    grid-template-rows: auto auto;
+    max-width: 90%;
     grid-gap: 1rem;
     
 }
@@ -106,8 +109,59 @@ img.grandpa-picture {
 
     white-space: nowrap;
     display: block;
+    min-width: 0;
+    min-height: 10;
+    max-height 10;
     overflow: hidden;
     text-overflow:ellipsis;
+    border-radius: 15px;
+}
+
+div.newsthumbnail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    overflow-x: auto;
+    overflow-y: auto;
+    min-width: 0;
+    overflow: hidden;
+    grid-template-rows: auto auto;
+    max-width: auto;
+    max-height: auto;
+    grid-gap: 3rem;
+}
+
+div.newsthumbnail-box {
+    background-color: wheat;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 0.5fr;
+    display: grid;
+}
+
+img.newsthumbnail-image {
+    border-radius: 30px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto;
+    border-style: solid;
+    border-block-width: 3px;
+}
+
+h1.newsthumbnail-title {
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+button.newthumbnail-button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
 
 .e-photo{

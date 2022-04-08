@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\css\images\" />
+    <Folder Include="wwwroot\data\newsimages\" />
   </ItemGroup>
 
 

@@ -4,44 +4,26 @@
     "Lastname": "Tamberg",
     "Email": "madisjuliu@gmail.com",
     "Phone": "+37254583087",
-    "ImageName": "irdt5.jpg"
+    "ImageName": "Madis.jpg"
   },
   {
     "Firstname": "Oliver",
     "Lastname": "Puusalu",
     "Email": "idksapanesiiamidagi@gmail.com",
     "Phone": "+3725004477",
-    "ImageName": "irdt3.jpg"
+    "ImageName": "Oliver.jpg"
   },
   {
-    "Firstname": "Siin võiks",
-    "Lastname": "olla teie nimi",
-    "Email": "ja email",
-    "Phone": "ja muu",
-    "ImageName": "Matt.png"
+    "Firstname": "Kristen Eero",
+    "Lastname": "Eeo",
+    "Email": "krustycrab@crabmail.com",
+    "Phone": "+112",
+    "ImageName": "Eero.jpg"
   },
   {
-    "Firstname": "Joomas",
-    "Lastname": "Kala",
+    "Firstname": "PlaceHolder",
+    "Lastname": "Placeholder",
     "Email": "KaladelPoleEmaili@mail.ee",
-    "Phone": "+37254583087"
-  },
-  {
-    "Firstname": "Joomas",
-    "Lastname": "Kala",
-    "Email": "KaladelPoleEmaili@mail.ee",
-    "Phone": "+37254583087"
-  },
-  {
-    "Firstname": "Joomas",
-    "Lastname": "Kala",
-    "Email": "KaladelPoleEmaili@mail.ee",
-    "Phone": "+37254583087"
-  },
-  {
-    "Firstname": "Joomas",
-    "Lastname": "Kala",
-    "Email": "KaladelPoleEmaili@mail.ee",
-    "Phone": "+37254583087"
+    "Phone": "+Placeholder"
   }
 ]
