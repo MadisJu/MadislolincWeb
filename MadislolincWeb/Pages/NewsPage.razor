@@ -30,8 +30,8 @@ else
     }
     else
     {
-        <h1>@SelectedNews.Title</h1>
-        <p>@SelectedNews.Story</p>
+        <h1 class="newstitle">@SelectedNews.Title</h1>
+        <p class="newstext">@SelectedNews.Story</p>
         <button onclick="@(() => ToggleNews(null))"> Click here to go back</button>
     }
 
