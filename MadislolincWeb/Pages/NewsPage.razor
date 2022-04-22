@@ -3,9 +3,12 @@
 @using MadislolincWeb.Data
 @inject NewsDataFetcher NewsData
 
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage SessionStorage
+
 <PageTitle>Latest News!</PageTitle>
 
-@if(news == null)
+@if(news == null || !isConnected)
 {
     <p>Loading latest news...</p>
 }
@@ -44,6 +47,7 @@ else
 {
 
     private int MaxNewsOnPage = 3;
+
     private int NewsIndex = 0;
 
     private bool Showing = false;
@@ -58,7 +62,7 @@ else
         Showing = !Showing;
         InvokeAsync(() => StateHasChanged());
     }
-    private void NextNews()
+    private async void NextNews()
     {
         int pages = (int) Math.Floor((float)(news.Length / MaxNewsOnPage));
         if(NewsIndex == pages)
@@ -71,6 +75,8 @@ else
         }
 
         InvokeAsync(() => StateHasChanged());
+
+        await SessionStorage.SetAsync("NewsIndex", NewsIndex);
     }
 
     private News[] DisplayableNews()
@@ -90,6 +96,24 @@ else
     protected override async Task OnInitializedAsync()
     {
         news = await NewsData.GetNewsAsync();
+    }
+
+    private bool isConnected;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            isConnected = true;
+            await LoadSessionData();
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadSessionData()
+    {
+        var result = await SessionStorage.GetAsync<int>("NewsIndex");
+        NewsIndex = result.Success ? result.Value : 0;
     }
 
     private string GetImageString(News news)
