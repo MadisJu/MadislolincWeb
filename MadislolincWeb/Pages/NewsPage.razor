@@ -16,13 +16,11 @@ else
     {
         <div class="newsthumbnail-grid">
 
-        @foreach (var _news in news)
+        @foreach (var _news in DisplayableNews())
         {
-            <div class="newsthumbnail-box">
+            <div class="newsthumbnail-box" onclick="@(() => ToggleNews(_news))">
             <img src="@GetImageString(_news)" class ="newsthumbnail-image">
             <h1 class="newsthumbnail-title">@_news.Title</h1>
-            <button onclick="@(() => ToggleNews(_news))" class="newthumbnail-button">Read This immediately!</button>
-            
             
             </div>   
         }
@@ -35,9 +33,18 @@ else
         <button onclick="@(() => ToggleNews(null))"> Click here to go back</button>
     }
 
+    @if(news.Length > 3 && !Showing)
+    {
+        <div>
+            <button onclick="@(() =>NextNews())">Next Page</button>
+        </div>
+    }
 }
 @code
 {
+
+    private int MaxNewsOnPage = 3;
+    private int NewsIndex = 0;
 
     private bool Showing = false;
 
@@ -50,6 +57,34 @@ else
         SelectedNews = _selected;
         Showing = !Showing;
         InvokeAsync(() => StateHasChanged());
+    }
+    private void NextNews()
+    {
+        int pages = (int) Math.Floor((float)(news.Length / MaxNewsOnPage));
+        if(NewsIndex == pages)
+        {
+            NewsIndex = 0;
+        }
+        else
+        {
+            NewsIndex++;
+        }
+
+        InvokeAsync(() => StateHasChanged());
+    }
+
+    private News[] DisplayableNews()
+    {
+        int pages = (int) Math.Floor((float)(news.Length / MaxNewsOnPage));
+
+        if(pages == NewsIndex )
+        {
+            return news[(MaxNewsOnPage * NewsIndex) ..(MaxNewsOnPage * NewsIndex + ((news.Length % MaxNewsOnPage == 0) ? MaxNewsOnPage : news.Length % MaxNewsOnPage))];
+        }
+        else
+        {
+            return news[(MaxNewsOnPage * NewsIndex) ..(MaxNewsOnPage * NewsIndex + MaxNewsOnPage)];
+        }
     }
 
     protected override async Task OnInitializedAsync()
