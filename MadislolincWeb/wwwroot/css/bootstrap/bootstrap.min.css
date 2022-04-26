@@ -20,38 +20,46 @@
     color: #6B679C
 }
 
+
+/* Nevbar Things ----------------------------------------------*/
+
 div.navbar {
     margin: auto auto 7px auto;
     width: 100%;
     background-color: rgba(147, 204, 234, 0.7);
     border-radius: 5px;
     box-shadow: inset;
-}   
-
+}
 nav.navbar-display {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     overflow-x: auto;
 }
 
-.navlink-box{
+.navlink-box {
     width: auto;
     margin: 10px 10px 10px 10px;
-    text-align:center;
+    text-align: center;
     padding: 10px;
 }
-.navlink-box:hover{
-    margin: 10px 10px 10px 10px;
-    background-color: rgba(147, 204, 234, 0.3);
-    text-align:center;
-}
+
+    .navlink-box:hover {
+        margin: 10px 10px 10px 10px;
+        background-color: rgba(147, 204, 234, 0.3);
+        text-align: center;
+    }
+
 .nav-link {
     color: aliceblue;
 }
 
+/* Nevbar Things ----------------------------------------------*/
+
+
+
 .content{
     margin: auto auto 7px auto;
-    width: 100%;
+    width: 95%;
     height: auto;
     min-height: 0;
     min-width: 0;
@@ -65,13 +73,6 @@ nav.navbar-display {
     background-color: beige;
 }
 
-img.employee-image {
-    border-radius: 30px;
-    height: 40%;
-    width: 40%;
-    border-style:solid;
-    border-block-width: 3px;
-}
 img.grandpa-picture {
     object-fit: cover;
     height: auto;
@@ -82,42 +83,11 @@ img.grandpa-picture {
 
 
 
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(3, 1fr); */
-    overflow-x: auto;
-    overflow-y: auto;
-    min-width: 0;
-    overflow: hidden;
-    grid-template-rows: auto auto;
-    max-width: 90%;
-    grid-gap: 1rem;
-    
-}
-
-.employeebox {
-    display:block;
-    max-width: 1fr;
-    max-height: 1fr;
-    
-    background-color: cornsilk;
-    border-style: solid;
-    border-radius: 5px;
-    margin: 5px;
 
 
-    white-space: nowrap;
-    display: block;
-    min-width: 0;
-    min-height: 10;
-    max-height: 10;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    border-radius: 15px;
-}
-
-div.newsthumbnail-grid {
+/* News Things ----------------------------------------------*/
+div.newsthumbnail-grid 
+{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -131,11 +101,18 @@ div.newsthumbnail-grid {
     grid-gap: 3rem;
 }
 
-div.newsthumbnail-box {
+div.newsthumbnail-box 
+{
     background-color: wheat;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr, 0.5fr;
+    max-width: 90%;
     display: grid;
+    margin:auto;
+}
+.newsthumbnail-box:hover
+{
+    background-color: blanchedalmond;
 }
 
 img.newsthumbnail-image {
@@ -177,7 +154,49 @@ p.newstext{
     word-spacing: 5px;
     margin: auto;
 }
+/* News Things ----------------------------------------------*/
 
+/* Employee Things ------------------------------------------*/
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    overflow-x: auto;
+    overflow-y: auto;
+    min-width: 0;
+    overflow: hidden;
+    grid-template-rows: auto auto;
+    max-width: 90%;
+    grid-gap: 1rem;
+}
+
+.employeebox {
+    display: block;
+    max-width: 1fr;
+    max-height: 1fr;
+    background-color: cornsilk;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 5px;
+    white-space: nowrap;
+    display: block;
+    min-width: 0;
+    min-height: 10;
+    max-height: 10;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 15px;
+}
+
+
+img.employee-image {
+    border-radius: 30px;
+    height: 40%;
+    width: 40%;
+    border-style: solid;
+    border-block-width: 3px;
+}
+/*Arent those 2 kinda teh same thing?*/
 .e-photo{
     max-width: 40%;
     max-height: 40%;
@@ -199,11 +218,10 @@ p.newstext{
     .employee-grid{
         grid-template-columns: repeat(2, 1fr);
         display: grid;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 2 / 1;
         overflow: hidden;
-        max-width: 100vh;
-        max-height: 100vh;
-        grid-gap: 1rem;
+        max-width: 95%;
+        max-height: 95%;
     }
 }
 
@@ -212,10 +230,10 @@ p.newstext{
     .employee-grid{
         grid-template-columns: repeat(3, 1fr);
         display: grid;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 2 / 1;
         overflow: hidden;
-        max-width: 100vh;
-        max-height: 100vh;
-        grid-gap: 1rem;
+        max-width: 95%;
+        max-height: 95%;
     }
 }
+/* Employee Things ------------------------------------------*/
