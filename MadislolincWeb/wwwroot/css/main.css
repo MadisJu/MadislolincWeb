@@ -1,7 +1,5 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-@charset "UTF-8";
-
 /*Śtructure*/
 
 .base
@@ -18,7 +16,7 @@
     top: 0px;
     margin:auto;
     min-width: 100%;
-    height: 10%;
+    height: auto;
     background-color: #0B0C10;
 }
 
@@ -36,8 +34,7 @@ nav.navbar-display {
 }
 
 .navlink-box:hover {
-    text-align: center;
-    border-bottom: solid;
+    border-bottom: 5px solid #1861ac;
 }
 
 /* Nevbar Things ----------------------------------------------*/
@@ -55,9 +52,9 @@ nav.navbar-display {
 }
 
 .footer {
+    border-top: 5px solid #1861ac;
     width: 100%;
     border-radius: 15px;
-    background-color: beige;
     height: 10%
 
 }
@@ -81,6 +78,10 @@ html, body {
 h1, h2, p, a {
     color: #C5C6C7;
     
+}
+
+.style1{
+    text-align: center;
 }
 
 a:link {
