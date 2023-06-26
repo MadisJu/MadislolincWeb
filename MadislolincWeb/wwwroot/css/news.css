@@ -21,6 +21,7 @@ div.newsthumbnail-box {
 }
 
 .newsthumbnail-box:hover {
+
 }
 
 img.newsthumbnail-image {
@@ -62,5 +63,20 @@ p.newstext {
     max-width: 80%;
     word-spacing: 5px;
     margin: auto;
+}
+
+div.pageselect 
+{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+button.pages 
+{
+    color: #fff;
+    background-color: #196fc5;
+    border-color: #1861ac;
 }
 /* News Things ----------------------------------------------*/
