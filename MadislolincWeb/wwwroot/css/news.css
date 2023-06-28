@@ -20,7 +20,8 @@ div.newsthumbnail-box {
     margin: auto;
 }
 
-.newsthumbnail-box:hover {
+.newsthumbnail-box:hover > .newsthumbnail-image {
+    opacity: 0.3;
 
 }
 
@@ -33,7 +34,11 @@ img.newsthumbnail-image {
     margin: auto;
     border-style: solid;
     border-block-width: 3px;
-    border-color:#66FCF1;
+    border-color: #66FCF1;
+    transition: 1s;
+    opacity: 1;
+    max-width:100%;
+    max-height:100%;
 }
 
 h1.newsthumbnail-title {
@@ -79,4 +84,9 @@ button.pages
     background-color: #196fc5;
     border-color: #1861ac;
 }
+@keyframes imghover {
+  0%   {opacity : 1;}
+  100% {opacity : 0.4;}
+}
+
 /* News Things ----------------------------------------------*/

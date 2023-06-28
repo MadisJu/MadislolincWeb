@@ -25,16 +25,17 @@
     text-overflow: ellipsis;
 }
 .e-photo:hover + .employeedata{
-    display: block;
+    display: flex;
 
 }
-.e-photo:hover{
-    opacity: 0.4;
+.e-photo:hover {
+    opacity: 0.1;
 }
 
 .employeedata
 {
     display: none;
+    flex-direction:column;
     max-width: 100%;
     grid-column: 1;
     grid-row: 1;
@@ -54,9 +55,12 @@ img.employee-image {
     grid-row: 1;
     max-width: 100%;
     display: block;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .e-name {
+    margin-top:auto;
 }
 
 .e-email {

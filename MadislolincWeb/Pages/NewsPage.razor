@@ -33,7 +33,7 @@ else
     {
         <h1 class="newstitle">@SelectedNews.Title</h1>
         <p class="newstext">@SelectedNews.Story</p>
-        <button onclick="@(() => ToggleNews(null))"> Click here to go back</button>
+        <button class="pages" onclick="@(() => ToggleNews(null))"> Click here to go back</button>
     }
 
     @if(news.Length > 3 && !Showing)

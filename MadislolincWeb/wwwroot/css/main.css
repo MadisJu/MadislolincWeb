@@ -30,7 +30,8 @@ nav.navbar-display {
     width: auto;
     margin: 10px 10px 10px 10px;
     text-align: center;
-
+    border-bottom: 5px solid transparent;
+    transition: 0.5s;
 }
 
 .navlink-box:hover {
@@ -76,7 +77,8 @@ html, body {
 
 h1, h2, p, a {
     color: #C5C6C7;
-    
+    padding-left: 10px;
+
 }
 
 .style1{

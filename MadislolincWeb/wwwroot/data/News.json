@@ -1,7 +1,8 @@
 [
   {
     "Title": "New epic news! Website got epic upgrade (not really)",
-    "Story": "Long story short since news page was broken i had to fix it, it was wild! not really lmao. i spend like 8 hours trying to figure out why the buttons were unresponsive, it was because prerender, and there was no afterrender.... like bro. give me a break please."
+    "Story": "Long story short since news page was broken i had to fix it, it was wild! not really lmao. i spend like 8 hours trying to figure out why the buttons were unresponsive, it was because prerender, and there was no afterrender.... like bro. give me a break please.",
+    "ImageName":  "coding-on-laptop.jpg"
   },
   {
     "Title": "NRG õpilased lähevad TÜ Mängu Jämmile - suured ootused!",
