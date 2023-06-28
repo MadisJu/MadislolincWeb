@@ -8,9 +8,9 @@
 
 <PageTitle>Latest News!</PageTitle>
 
-@if(news == null || !isConnected)
+@if(@news == null || !isConnected)
 {
-    <p>Loading latest news...</p>
+    <p>Loading</p>
 }
 else
 {
@@ -33,13 +33,18 @@ else
     {
         <h1 class="newstitle">@SelectedNews.Title</h1>
         <p class="newstext">@SelectedNews.Story</p>
-        <button onclick="@(() => ToggleNews(null))"> Click here to go back</button>
+        <button class="pages" onclick="@(() => ToggleNews(null))"> Click here to go back</button>
     }
 
     @if(news.Length > 3 && !Showing)
     {
-        <div>
-            <button onclick="@(() =>NextNews())">Next Page</button>
+        <div class="pageselect">
+            @for(int x = 0; x < newspages; x++)
+            {
+                //Dumb workaround but hey it works=?! (problem was that the value set for the button changed as the loop went forward)
+                int y = x;
+                <button class="pages" onclick="@(() =>NextNews(y))">@(y + 1)</button>
+            }
         </div>
     }
 }
@@ -56,26 +61,22 @@ else
 
     private News[] news;
 
+    int newspages;
+
     private void ToggleNews(News _selected)
     {
         SelectedNews = _selected;
         Showing = !Showing;
-        InvokeAsync(() => StateHasChanged());
+        StateHasChanged();
     }
-    private async void NextNews()
+
+    private async void NextNews(int pageindex)
     {
-        int pages = (int) Math.Floor((float)(news.Length / MaxNewsOnPage));
-        if(NewsIndex == pages)
-        {
-            NewsIndex = 0;
-        }
-        else
-        {
-            NewsIndex++;
-        }
+        NewsIndex = pageindex;
 
         InvokeAsync(() => StateHasChanged());
 
+        //Set the current news page into the local browser storage so next time the news page is visited, it will automatically throw them into the same page (during the same session)
         await SessionStorage.SetAsync("NewsIndex", NewsIndex);
     }
 
@@ -89,6 +90,7 @@ else
         }
         else
         {
+            //Faulty logic not all pages might have a full thing
             return news[(MaxNewsOnPage * NewsIndex) ..(MaxNewsOnPage * NewsIndex + MaxNewsOnPage)];
         }
     }
@@ -96,16 +98,18 @@ else
     protected override async Task OnInitializedAsync()
     {
         news = await NewsData.GetNewsAsync();
+        newspages = (int) Math.Floor((float)(news.Length / MaxNewsOnPage)) + 1;
+        await InvokeAsync(() => StateHasChanged());
     }
 
-    private bool isConnected;
+    private bool isConnected = false;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            isConnected = true;
             await LoadSessionData();
+            isConnected = true;
             StateHasChanged();
         }
     }
