@@ -1,7 +1,7 @@
 [
   {
     "Title": "New epic news! Website got epic upgrade (not really)",
-    "Story": "Long story short since news page was broken i had to fix it, it was wild! not really lmao. i spend like 8 hours trying to figure out why the buttons were unresponsive, it was because prerender, and there was no afterrender.... like bro. give me a break please.",
+    "Story": "Long story short since news page was broken i had to fix it, it was wild! not really. i spent like 8 hours trying to figure out why the buttons were unresponsive, it was because prerender, and there was no afterrender...",
     "ImageName":  "coding-on-laptop.jpg"
   },
   {
@@ -13,12 +13,12 @@
     "Story": "1.  kuni 3. aprillil toimunud Tartu Ülikooli Mängu Jämm oli NRG õpilastele Madisele, Oliverile ning Eerole täielik läbikukkumine. Nende tiim sai võisteldes algajate vastu 9. koha 13. osalejast. Uurime nüüd, mis läks valesti, keda süüdistatakse ja kuidas saaks järgmine kord paremini. Tiimijuht Madis tõdeb, et “kohe ei oskagi öelda, mis nii valesti läks, ega vist ikka need vigastused, mis ei võimaldanud meie tiimil täie võimsuse juures töötada”. Vigastuste märke Madisel ei olnud ning peale rohkemate küsimuste esitamist vahetas ta lihtsalt teemat. Tuleme selle juurde võibolla hiljem tagasi kui selgub, mis vigastus takistab programmeerimist. Oliver tõdes, et “meid vedas alt seekord kindlasti peamiselt tehnoloogia, et Unity jampsis ja töötamine oli põhimõtteliselt võimatu”. Ka selle teema kohta küsides ei saanud ühtegi adekvaatset lisa-kommentaari. Lõpuks küsisime Eerolt, et mis tema arvates võis nii valesti minna, ta arvas, et “seekord läks valesti kindlasti see, et Unity piiras minu täielikku potentsiaalsust ning lisaks olid meil erinevad tarkvarade probleemid. Vähemalt sain häälitseda”. Võib väita, et tiim oli täielik läbikukkumine, leiti palju erinevaid põhjuseid, millest juhuslikult üksi pole nende endi süü. Mäng sai vähemalt valmis, mis on kõige olulisem. Loodame, et saadi uusi ja olulisi kogemusi ja see võit tulevikus tulemata ei jää."
   },
   {
-    "Title": "Madis Katsetab asju",
-    "Story": "Eksdeee"
+    "Title": "Just a post to test out functionality",
+    "Story": "There is nothing interesting in here"
   },
   {
-    "Title": "Madis Katsetab asju 2",
-    "Story": "Eksdeee"
+    "Title": "First news!",
+    "Story": "I wish i had something more interesting to say"
   }
 ]
 

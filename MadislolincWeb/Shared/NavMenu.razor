@@ -1,31 +1,31 @@
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+<div class="navbar">
+    <div class="navbar-brand">
+        <a href="">MadislolincWeb</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
 
-    
-   @* <div class="navlink-box">
-        <div class="nav-link">
-            <a class="navbar-brand" href="">MadislolincWeb</a>
-            <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-                 <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>*@
-    <nav class="navbar-display">
-        <NavLink class="nav-link navlink-box" href="" Match="NavLinkMatch.All">
-            <span class="oi oi-home" aria-hidden="true"></span> Home
+    <nav class="@NavMenuCssClass nav-menu">
+        <NavLink class="nav-item" href="" Match="NavLinkMatch.All">
+            <span class="oi oi-home" aria-hidden="true"></span>
+            <span class="nav-text">Home</span>
         </NavLink>
-        <NavLink class="nav-link navlink-box" href="projects">
-            <span class="oi oi-plus" aria-hidden="true"></span> Projects
+        <NavLink class="nav-item" href="projects">
+            <span class="oi oi-plus" aria-hidden="true"></span>
+            <span class="nav-text">Projects</span>
         </NavLink>
-
-        <NavLink class="nav-link navlink-box" href="employees">
-            <span class="oi oi-list-rich" aria-hidden="true"></span> Employees
+        <NavLink class="nav-item" href="employees">
+            <span class="oi oi-list-rich" aria-hidden="true"></span>
+            <span class="nav-text">Employees</span>
         </NavLink>
-
-        <NavLink class="nav-link navlink-box" href="news">
-            <span class="oi oi-list-rich" aria-aria-hidden="true"></span> News
+        <NavLink class="nav-item" href="news">
+            <span class="oi oi-document" aria-hidden="true"></span>
+            <span class="nav-text">News</span>
         </NavLink>
-        <NavLink class="nav-link navlink-box" href="AboutUs">
-            <span class="oi oi-list-rich" aria-aria-hidden="true"></span> About Us
+        <NavLink class="nav-item" href="AboutUs">
+            <span class="oi oi-person" aria-hidden="true"></span>
+            <span class="nav-text">About Us</span>
         </NavLink>
     </nav>
 </div>

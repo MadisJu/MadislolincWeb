@@ -12,30 +12,93 @@
 /* Nevbar Things ----------------------------------------------*/
 
 .navbar {
-    position: sticky;
-    top: 0px;
-    margin:auto;
-    min-width: 100%;
-    height: auto;
     background-color: #0B0C10;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-nav.navbar-display {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
 }
 
-.navlink-box {
-    width: auto;
-    margin: 10px 10px 10px 10px;
-    text-align: center;
-    border-bottom: 5px solid transparent;
-    transition: 0.5s;
+.navbar-brand a {
+    color: #C5C6C7;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-.navlink-box:hover {
-    border-bottom: 5px solid #1861ac;
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: 1px solid #45A29E;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center center;
+    background-size: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #C5C6C7;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+    background-color: #1F2833;
+    color: #66FCF1;
+    border-bottom: 3px solid #45A29E;
+}
+
+.nav-item.active {
+    background-color: #1F2833;
+    color: #66FCF1;
+    border-bottom: 3px solid #66FCF1;
+}
+
+.nav-item .oi {
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+.nav-text {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .nav-menu.collapse {
+        display: none;
+    }
+
+    .nav-menu {
+        margin-top: 1rem;
+    }
 }
 
 /* Nevbar Things ----------------------------------------------*/

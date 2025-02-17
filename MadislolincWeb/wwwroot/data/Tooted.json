@@ -1,0 +1,28 @@
+{
+  "Tööriistade_tarvikud": [
+    {
+      "Nimi": "Keermestaja komplekt",
+      "Hind": 156.00,
+      "Info": "Keermestaja komplekt, 151tk",
+      "Pildid": 1,
+      "Sildid": ["Keermestaja", "Tööriist"]
+    }
+  ],
+  "Aiatehnika": 
+  [
+    {
+      "Nimi": "Külgniiduk Stark KDL 160 Profi",
+      "Hind": 4140.00,
+      "Info": "Külgniiduk",
+      "Pildid": 1,
+      "Sildid": [ "Niiduk" ]
+    },
+    {
+      "Nimi": "Külgniiduk Stark KDL 200 Profi",
+      "Hind": 4160.00,
+      "Info": "Külgniiduk",
+      "Pildid": 1,
+      "Sildid": [ "Niiduk" ]
+    }
+  ]
+}
